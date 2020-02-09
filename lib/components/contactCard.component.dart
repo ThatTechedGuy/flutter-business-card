@@ -11,24 +11,27 @@ class ContactCard extends StatelessWidget {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
       color: Colors.grey[900],
-      child: Padding(
-        padding: EdgeInsets.all(20.0),
-        child: Row(
-          children: <Widget>[
-            Icon(
-              iconData,
-              color: Colors.green[400],
-            ),
-            SizedBox(width: 35.0),
-            Text(
-              displayText,
-              style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[300]),
-            )
-          ],
+      child: InkWell(
+        onTap: () {},
+        child: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Row(
+            children: <Widget>[
+              Icon(
+                iconData,
+                color: Colors.green[400],
+              ),
+              SizedBox(width: 35.0),
+              Text(
+                displayText,
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[300]),
+              )
+            ],
+          ),
         ),
       ),
     );
