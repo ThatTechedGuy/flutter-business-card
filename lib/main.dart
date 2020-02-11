@@ -10,7 +10,9 @@ class BusinessCardApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Business Card',
       home: HomePage(),
-      themeMode: ThemeMode.dark,
+      theme: ThemeData.dark().copyWith(
+        accentColor: Colors.greenAccent,
+      ),
     );
   }
 }

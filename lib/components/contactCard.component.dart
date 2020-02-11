@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ContactCard extends StatelessWidget {
   final IconData iconData;
   final String displayText;
-
-  ContactCard({this.displayText, this.iconData});
+  final Function onClick;
+  ContactCard({this.displayText, this.iconData, this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class ContactCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
       color: Colors.grey[900],
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          onClick();
+        },
         child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Row(
